@@ -8,6 +8,14 @@
     "note": ""
   },
   {
+    "transaction_id": "T000006",
+    "amount": 2222.0,
+    "type": "支出",
+    "category": "餐饮",
+    "date": "2025-11-06",
+    "note": ""
+  },
+  {
     "transaction_id": "T000002",
     "amount": 444.0,
     "type": "支出",
@@ -40,11 +48,11 @@
     "note": ""
   },
   {
-    "transaction_id": "T000006",
-    "amount": 2222.0,
-    "type": "支出",
-    "category": "餐饮",
-    "date": "2025-11-06",
-    "note": ""
+    "transaction_id": "T000007",
+    "amount": 5555.0,
+    "type": "收入",
+    "category": "工资",
+    "date": "2025-11-07",
+    "note": "加绩效了"
   }
 ]
