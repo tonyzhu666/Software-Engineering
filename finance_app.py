@@ -152,6 +152,10 @@ class BudgetService:
     def create_budget(self, category: str, amount: float, 
                      month: str, note: str = "") -> bool:
         """创建预算"""
+        # 验证金额必须为正数
+        if amount <= 0:
+            print(f"错误：预算金额必须大于0，当前金额：{amount}")
+            return False
         try:
             # 检查是否已存在该类别该月的预算
             for budget in self.budgets:
@@ -194,7 +198,10 @@ class BudgetService:
         try:
             for i, budget in enumerate(self.budgets):
                 if budget.budget_id == budget_id:
+                    #bug2
+                    budget_to_delete = self.budgets[i]
                     del self.budgets[i]
+                    del budget_to_delete
                     self.save_budgets()
                     return True
             return False
@@ -252,10 +259,39 @@ class TransactionService:
         self.transactions: List[Transaction] = []
         self.load_transactions()
     
+    # def create_transaction(self, amount: float, transaction_type: str, 
+    #                       category: str, date: str, note: str = "") -> bool:
+    #     """创建交易"""
+    #     try:
+    #         transaction_id = f"T{len(self.transactions) + 1:06d}"
+    #         transaction = Transaction(
+    #             transaction_id=transaction_id,
+    #             amount=amount,
+    #             transaction_type=transaction_type,
+    #             category=category,
+    #             date=date,
+    #             note=note
+    #         )
+    #         self.transactions.append(transaction)
+    #         self.save_transactions()
+    #         return True
+    #     except Exception as e:
+    #         print(f"创建交易失败: {e}")
+    #         return False
     def create_transaction(self, amount: float, transaction_type: str, 
-                          category: str, date: str, note: str = "") -> bool:
+                      category: str, date: str, note: str = "") -> bool:
         """创建交易"""
         try:
+            # 添加金额验证
+            if amount <= 0:
+                return False
+                
+            # 验证日期格式
+            try:
+                datetime.strptime(date, "%Y-%m-%d")
+            except ValueError:
+                return False
+                
             transaction_id = f"T{len(self.transactions) + 1:06d}"
             transaction = Transaction(
                 transaction_id=transaction_id,
@@ -272,11 +308,39 @@ class TransactionService:
             print(f"创建交易失败: {e}")
             return False
     
+    # def update_transaction(self, transaction_id: str, amount: float, 
+    #                       transaction_type: str, category: str, 
+    #                       date: str, note: str = "") -> bool:
+    #     """更新交易记录"""
+    #     try:
+    #         for transaction in self.transactions:
+    #             if transaction.transaction_id == transaction_id:
+    #                 transaction.amount = amount
+    #                 transaction.type = transaction_type
+    #                 transaction.category = category
+    #                 transaction.date = date
+    #                 transaction.note = note
+    #                 self.save_transactions()
+    #                 return True
+    #         return False
+    #     except Exception as e:
+    #         print(f"更新交易失败: {e}")
+    #         return False
     def update_transaction(self, transaction_id: str, amount: float, 
-                          transaction_type: str, category: str, 
-                          date: str, note: str = "") -> bool:
+                      transaction_type: str, category: str, 
+                      date: str, note: str = "") -> bool:
         """更新交易记录"""
         try:
+            # 添加金额验证
+            if amount <= 0:
+                return False
+                
+            # 验证日期格式
+            try:
+                datetime.strptime(date, "%Y-%m-%d")
+            except ValueError:
+                return False
+                
             for transaction in self.transactions:
                 if transaction.transaction_id == transaction_id:
                     transaction.amount = amount
@@ -359,6 +423,8 @@ class TransactionService:
                            max_amount: float = None) -> List[Transaction]:
         """搜索交易"""
         results = self.transactions
+        #bug1
+        large_buffer = [0] * 1000
         
         # 关键词搜索
         if keyword:

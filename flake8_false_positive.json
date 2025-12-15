@@ -1,0 +1,44 @@
+{
+  "key_issues": [
+    {
+      "code": "E128",
+      "filename": "finance_app.py",
+      "line_number": 153,
+      "column_number": 22,
+      "text": "continuation line under-indented for visual indent",
+      "physical_line": "                     month: str, note: str = \"\") -> bool:",
+      "severity": "medium",
+      "reason": "续行缩进不正确，是常见的格式错误"
+    },
+    {
+      "code": "E265",
+      "filename": "finance_app.py",
+      "line_number": 365,
+      "column_number": 9,
+      "text": "block comment should start with '# '",
+      "physical_line": "        #bug1",
+      "severity": "medium",
+      "reason": "注释格式错误，与未使用变量问题同时出现"
+    },
+    {
+      "code": "E501",
+      "filename": "finance_app.py",
+      "line_number": 477,
+      "column_number": 80,
+      "text": "line too long (102 > 79 characters)",
+      "physical_line": "    def __init__(self, transaction_service: TransactionService, budget_service: BudgetService = None):",
+      "severity": "medium",
+      "reason": "函数定义行过长，建议拆分参数"
+    },
+    {
+      "code": "F541",
+      "filename": "finance_app.py",
+      "line_number": 2137,
+      "column_number": 22,
+      "text": "f-string is missing placeholders",
+      "physical_line": "        stats_text = f\"\\u6570\\u636e\\u7edf\\u8ba1\\u6982\\u89c8:\\n\\n\"",
+      "severity": "high",
+      "reason": "无效的f-string用法，应改为普通字符串"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "type": "error",
+        "module": "finance_app",
+        "obj": "BudgetService.delete_budget",
+        "line": 161,
+        "column": 21,
+        "endLine": 162,
+        "endColumn": 28,
+        "path": "finance_app.py",
+        "symbol": "syntax-error",
+        "message": "Memory leak: 'budget_to_delete' is deleted but still referenced, then manually deleted with 'del'",
+        "message-id": "E0001"
+    },
+    {
+        "type": "error",
+        "module": "finance_app",
+        "obj": "TransactionService.search_transactions",
+        "line": 280,
+        "column": 9,
+        "endLine": 282,
+        "endColumn": 30,
+        "path": "finance_app.py",
+        "symbol": "unused-variable",
+        "message": "Memory inefficiency: 'large_buffer' is allocated but never used",
+        "message-id": "W0612"
+    },
+    {
+        "type": "convention",
+        "module": "finance_app",
+        "obj": "MainScreen.refresh_data",
+        "line": 762,
+        "column": 9,
+        "endLine": 763,
+        "endColumn": 42,
+        "path": "finance_app.py",
+        "symbol": "invalid-name",
+        "message": "Variable name 'all_transactions' doesn't match snake_case naming style",
+        "message-id": "C0103"
+    },
+    {
+        "type": "refactor",
+        "module": "finance_app",
+        "obj": "AddTransactionScreen.setup_ui",
+        "line": 833,
+        "column": 9,
+        "endLine": 920,
+        "endColumn": 13,
+        "path": "finance_app.py",
+        "symbol": "too-many-locals",
+        "message": "Too many local variables (15/15)",
+        "message-id": "R0914"
+    },
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "BudgetScreen.refresh_budgets",
+        "line": 1478,
+        "column": 13,
+        "endLine": 1489,
+        "endColumn": 19,
+        "path": "finance_app.py",
+        "symbol": "too-many-branches",
+        "message": "Too many branches (6/12)",
+        "message-id": "R0912"
+    }
+]

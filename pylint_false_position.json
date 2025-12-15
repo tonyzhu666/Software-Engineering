@@ -1,0 +1,41 @@
+[
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "CategoryService.save_categories",
+        "line": 126,
+        "column": 15,
+        "endLine": 126,
+        "endColumn": 24,
+        "path": "finance_app.py",
+        "symbol": "broad-exception-caught",
+        "message": "Catching too general exception Exception",
+        "message-id": "W0718"
+    },
+    {
+        "type": "refactor",
+        "module": "finance_app",
+        "obj": "ExportScreen.get_export_data",
+        "line": 2057,
+        "column": 8,
+        "endLine": 2076,
+        "endColumn": 25,
+        "path": "finance_app.py",
+        "symbol": "no-else-return",
+        "message": "Unnecessary \"elif\" after \"return\", remove the leading \"el\" from \"elif\"",
+        "message-id": "R1705"
+    },
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "ExportScreen.update_stats",
+        "line": 2132,
+        "column": 21,
+        "endLine": 2132,
+        "endColumn": 47,
+        "path": "finance_app.py",
+        "symbol": "f-string-without-interpolation",
+        "message": "Using an f-string that does not have any interpolated variables",
+        "message-id": "W1309"
+    }
+]

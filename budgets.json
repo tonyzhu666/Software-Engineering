@@ -1,16 +1,16 @@
 [
   {
-    "budget_id": "B000001",
-    "category": "餐饮",
-    "amount": 9999.0,
+    "budget_id": "B000002",
+    "category": "娱乐",
+    "amount": 100.0,
     "month": "2025-11",
     "note": ""
   },
   {
     "budget_id": "B000002",
-    "category": "娱乐",
-    "amount": 100.0,
-    "month": "2025-11",
+    "category": "餐饮",
+    "amount": 1111.0,
+    "month": "2025-12",
     "note": ""
   }
 ]

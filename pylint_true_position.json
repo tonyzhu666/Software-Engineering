@@ -1,0 +1,93 @@
+[
+    {
+        "type": "convention",
+        "module": "finance_app",
+        "obj": "",
+        "line": 19,
+        "column": 0,
+        "endLine": null,
+        "endColumn": null,
+        "path": "finance_app.py",
+        "symbol": "trailing-whitespace",
+        "message": "Trailing whitespace",
+        "message-id": "C0303"
+    },
+    {
+        "type": "refactor",
+        "module": "finance_app",
+        "obj": "TransactionService.update_transaction",
+        "line": 275,
+        "column": 4,
+        "endLine": 275,
+        "endColumn": 26,
+        "path": "finance_app.py",
+        "symbol": "too-many-positional-arguments",
+        "message": "Too many positional arguments (7/5)",
+        "message-id": "R0917"
+    },
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "TransactionService.search_transactions",
+        "line": 366,
+        "column": 8,
+        "endLine": 366,
+        "endColumn": 20,
+        "path": "finance_app.py",
+        "symbol": "unused-variable",
+        "message": "Unused variable 'large_buffer'",
+        "message-id": "W0612"
+    },
+    {
+        "type": "refactor",
+        "module": "finance_app",
+        "obj": "SearchScreen",
+        "line": 1444,
+        "column": 0,
+        "endLine": 1444,
+        "endColumn": 18,
+        "path": "finance_app.py",
+        "symbol": "too-many-ancestors",
+        "message": "Too many ancestors (8/7)",
+        "message-id": "R0901"
+    },
+    {
+        "type": "error",
+        "module": "finance_app",
+        "obj": "ExportScreen.browse_file",
+        "line": 2044,
+        "column": 29,
+        "endLine": 2044,
+        "endColumn": 46,
+        "path": "finance_app.py",
+        "symbol": "possibly-used-before-assignment",
+        "message": "Possibly using variable 'default_extension' before assignment",
+        "message-id": "E0606"
+    },
+    {
+        "type": "error",
+        "module": "finance_app",
+        "obj": "ExportScreen.browse_file",
+        "line": 2045,
+        "column": 22,
+        "endLine": 2045,
+        "endColumn": 32,
+        "path": "finance_app.py",
+        "symbol": "possibly-used-before-assignment",
+        "message": "Possibly using variable 'file_types' before assignment",
+        "message-id": "E0606"
+    },
+    {
+        "type": "convention",
+        "module": "finance_app",
+        "obj": "",
+        "line": 2214,
+        "column": 0,
+        "endLine": null,
+        "endColumn": null,
+        "path": "finance_app.py",
+        "symbol": "trailing-newlines",
+        "message": "Trailing newlines",
+        "message-id": "C0305"
+    }
+]

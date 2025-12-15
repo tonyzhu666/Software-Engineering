@@ -1,0 +1,54 @@
+[
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "TransactionService.search_transactions",
+        "line": 280,
+        "column": 9,
+        "endLine": 280,
+        "endColumn": 25,
+        "path": "finance_app.py",
+        "symbol": "unnecessary-lambda",
+        "message": "Unnecessary lambda assignment - allocate list directly",
+        "message-id": "W0108"
+    },
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "TransactionService.get_transactions_by_month",
+        "line": 338,
+        "column": 13,
+        "endLine": 351,
+        "endColumn": 19,
+        "path": "finance_app.py",
+        "symbol": "simplifiable-if-statement",
+        "message": "If statement can be simplified",
+        "message-id": "R1703"
+    },
+    {
+        "type": "warning",
+        "module": "finance_app",
+        "obj": "StatisticsService.get_budget_analysis",
+        "line": 381,
+        "column": 13,
+        "endLine": 387,
+        "endColumn": 29,
+        "path": "finance_app.py",
+        "symbol": "no-else-return",
+        "message": "Unnecessary 'else' after 'return'",
+        "message-id": "R1705"
+    },
+    {
+        "type": "refactor",
+        "module": "finance_app",
+        "obj": "PersonalFinanceApp.show_main_screen",
+        "line": 2177,
+        "column": 9,
+        "endLine": 2218,
+        "endColumn": 35,
+        "path": "finance_app.py",
+        "symbol": "too-many-arguments",
+        "message": "Too many arguments in switch_screen calls (3 or 4)",
+        "message-id": "R0913"
+    }
+]
